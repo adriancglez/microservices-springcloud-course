@@ -18,6 +18,9 @@ public class Producto implements Serializable {
     @Temporal(TemporalType.DATE)
     private Date createdAt;
 
+    @Transient
+    private Integer port;
+
     public Long getId() {
         return id;
     }
@@ -48,6 +51,14 @@ public class Producto implements Serializable {
 
     public void setCreatedAt(Date createdAt) {
         this.createdAt = createdAt;
+    }
+
+    public Integer getPort() {
+        return port;
+    }
+
+    public void setPort(Integer port) {
+        this.port = port;
     }
 
     @Override
