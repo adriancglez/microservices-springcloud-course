@@ -37,7 +37,7 @@ public class ProductoController {
     }
 
     @GetMapping("/ver/{id}")
-    public Producto detalle(@PathVariable("id") Long id) {
+    public Producto detalle(@PathVariable("id") Long id) throws Exception {
         Producto producto = this.service.findById(id);
         /*producto.setPort(Integer.parseInt(this.environment.getProperty("local.server.port")));*/
         producto.setPort(this.port);
